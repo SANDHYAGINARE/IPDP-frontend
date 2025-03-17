@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 267 100% 61%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 267 100% 15%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 267 100% 25%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 267 100% 61%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-violet-500 to-purple-300;
+}
+
+.event-card {
+  @apply relative overflow-hidden rounded-lg transition-all duration-300 hover:shadow-[0_0_15px_rgba(139,92,246,0.5)];
+}
+
+.event-card:hover .event-card-image {
+  @apply scale-110;
+}
+
+.event-card-image {
+  @apply transition-all duration-500;
+}
+
+.event-badge {
+  @apply absolute top-3 right-3 bg-violet-600 text-white text-xs font-bold px-2 py-1 rounded-full;
+}
+
